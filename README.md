@@ -24,13 +24,77 @@
 <p>Faced with an array of public API’s we settled on Brewdog, with its public use domain easily accessible through simple GET requests. We created our RESTful React app and, firstly, used React Router to link our Index, Show and Home components. We then created a NavBar component and imported a Link helper component to string together pages for navigation.</p>
 
 ```
+function App() {
+
+  return (  
+    <BrowserRouter> 
+      <Navbar /> 
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/beers/:beerId" component={ShowBeer} />
+        <Route path="/BeerIndex" component={BeerIndex} /> 
+        <Route path="/About" component={About}/>
+        <Route pth="/MyBeers" component={MyBeers} />
+      </Switch>
+    </BrowserRouter>
+  
+  )
+}
 ```
 
 <h3>Index</h3>
 
-<p>Once our pages were connected we made an AJAX axios request for the API, filtered our desired object fields and mapped them out onto the index page. Initially, we created a separate Card.js component to display the fields and import them into Index.js, but eventually decided to display the fields through divs in the map function, subsequently styling said tags with Bulma. Wrapping the function in a Link ensued clicking a single card would take the user to the Show.js page for that items id. We also added input search functionality through a handleInput() event.</p>
+<p>Once our pages were connected we made an AJAX axios request for the API, filtered our desired object fields and mapped them out onto the index page. Initially, we created a separate Card.js component to display the fields and import them into Index.js, but eventually decided to display the fields through divs in the map function, subsequently styling said tags with Bulma. Wrapping the function in a Link ensued clicking a single card would take the user to the Show.js page for that items id.</p>
 
 ```
+return ( 
+    <>
+      <input className ="input is-medium" type="text" placeholder="Search... " onChange={handleInput}></input>
+      <div className="main-container"> {
+        beers ? 
+
+          filterBeers().map(beer =>  {
+            return  <Link key={beer.id} to={`/beers/${beer.id}`}>
+              <div className="container-beer" key={beer.id}> 
+              
+                <div className="text-name">
+                  <h1 className ="main-name">{beer.name}</h1>
+                  <p>`{beer.tagline}`</p>
+                </div>
+                <figure>
+                  <img className="beers" src={beer.image_url} alt={beer.name} />
+                </figure>
+              </div>
+            
+            </Link>           
+          }
+          )
+          :       
+          <p>Loading....</p>
+      }
+      </div>
+    </>
+  )
+
+}
+```
+<p>We also added input search functionality through a handleInput() event.</p>
+
+```
+const handleInput = (e) => {
+    setSearchTerm(e.target.value)
+    console.log(e.target.value)
+  }
+
+  function filterBeers() {
+    return beers.filter(beer => {
+      console.log('hello')
+      return (
+        beer.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+  
+    })
+  }
 ```
 
 <h3>Show</h3>
@@ -40,7 +104,7 @@
 ```
 ```
 
-<p>screenshot</p>
+<img src="https://i.imgur.com/JEanOVg.png" alt="Brewdog index page"/>
 
 <h2>Future Features</h2>
 
