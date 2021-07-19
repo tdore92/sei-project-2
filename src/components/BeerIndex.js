@@ -54,8 +54,7 @@ function BeerIndex() {
                 </figure>
               </div>
             
-            </Link>
-           
+            </Link>           
           }
           )
           :       
