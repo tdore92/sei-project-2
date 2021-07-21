@@ -99,7 +99,7 @@ const handleInput = (e) => {
 
 <h3>Show</h3>
 
-<p>For the show page we displayed more of the object fields through ADD METHOD. The challenge here was to add the ability for users to add their favourite drinks to a MyBeer.js component. We decided upon creating a handling event that, on an onClick, pushed the beer to a new array in localStorage to be mapped into the MyBeers.js page.</p>
+<p>For the show page we displayed more of the object fields. The challenge here was to add the ability for users to add their favourite drinks to a 'My Beers' page. We decided upon creating a handling event that, on clicking a button, pushed the beer to a new array in localStorage to be mapped into the MyBeers.js page.</p>
 
 ```
 ```
@@ -109,7 +109,7 @@ const handleInput = (e) => {
 <h2>Future Features</h2>
 
 <li>Create register/login functionality.</li>
-<li>MyBeers component made only accessible for logged in users.</li>
+<li>MyBeers component finalised.</li>
 
 <h2>Lessons Learned</h2>
 
