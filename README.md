@@ -133,7 +133,7 @@ const handleInput = (e) => {
 
 <h3>Challenges</h3>
 
-<p></p>
+<p>The most difficult component was the Favourite Beers function as it was something we hadn't really come across before, and something that was functional minutes before the deadline arrived. In general, wrestling with mapping out the API data was also a case of trial and error before finding the syntax that produced the result we desired.</p>
 
 <h2>Future Features</h2>
 
