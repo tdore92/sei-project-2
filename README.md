@@ -14,12 +14,20 @@
 
 <h2>Technologies Used</h2>
 
-<li>React.js</li>
+<li>React</li>
+<li>Node.js</li>
+<li>Axios</li>
+<li>Express</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>Javascript</li>
 <li>Git</li>
 <li>Github</li>
 <li>Bulma</li>
 
 <h2>Approach Taken</h2>
+
+<p>The primary method of co-operation between me and Craig would be VS Code's Live Share extension, which would allow us to work on the same version simultaneously. We stayed on Zoom for the entire duration of our coding sessions in order to easily communicate.</p>
 
 <p>Faced with an array of public API’s we settled on Brewdog, with its public use domain easily accessible through simple GET requests. We created our RESTful React app and, firstly, used React Router to link our Index, Show and Home components. We then created a NavBar component and imported a Link helper component to string together pages for navigation.</p>
 
@@ -102,9 +110,30 @@ const handleInput = (e) => {
 <p>For the show page we displayed more of the object fields. The challenge here was to add the ability for users to add their favourite drinks to a 'My Beers' page. We decided upon creating a handling event that, on clicking a button, pushed the beer to a new array in localStorage to be mapped into the MyBeers.js page.</p>
 
 ```
+ const handleClick = (e) => {
+    console.log(e.target.value)
+    const favBeers = JSON.parse(window.localStorage.getItem('beers')) || []
+    console.log(beer)
+    favBeerArray = [...favBeerArray, beer]
+    favBeers.push(beer)
+    localStorage.setItem('beers',JSON.stringify(favBeers))
+    console.log(favBeerArray)
+    history.push('/myBeers')
+  
+  }
 ```
 
 <img src="https://i.imgur.com/JEanOVg.png" alt="Brewdog index page"/>
+
+<h3>Wins</h3>
+
+<p>This project very much cemented my understanding of how to map out an array from an API- a vital component of almost any user interface.</p>
+
+<p>Adding the search bar and show pages gave satisfaction in turning the app from a display to an interactive app.</p>
+
+<h3>Challenges</h3>
+
+<p></p>
 
 <h2>Future Features</h2>
 
@@ -113,6 +142,7 @@ const handleInput = (e) => {
 
 <h2>Lessons Learned</h2>
 
-<li>Whilst project 1 was an introduction to single page JavaScript, project 2 was our first experience in creating the user interface fundamentals- index and show components- through filtering and sorting arrays. </li>
+<li>Whilst project 1 was an introduction to single page JavaScript, project 2 was our first experience in creating the user interface fundamentals- index and show components- through filtering and sorting arrays. Constant usage of this syntax will help commit the code to memory, and have it almost become a reflex when tackling similar endpoints in the future.</li>
+
 <li>From this project we created our first front end React app, and gained a base knowledge of component use, AJAX requests (primarily axis), and GET requests using a public API in the client HTTP.</li>
 
