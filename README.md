@@ -2,7 +2,9 @@
 
 <h1>Overview</h1>
 
-<p>Our second GA project was done in pairs- using a public API, within 24 hours, we built a react application with the option to utilise a router and several pages. Craig and I decided on creating a Brewdog related webpage to show the brands products.</p>
+<p>Our second GA project was done in pairs- using a public API, within 24 hours, we built a React application with the option to utilise a router and several pages. Craig and I decided on creating a Brewdog related webpage to show the brands products.</p>
+
+<a href="">Visit our Brewdog app here.</a>
 
 <h2>Brief</h2>
 
@@ -20,9 +22,9 @@
 <li>Express</li>
 <li>HTML</li>
 <li>CSS</li>
-<li>Javascript</li>
+<li>JavaScript</li>
 <li>Git</li>
-<li>Github</li>
+<li>GitHub</li>
 <li>Bulma</li>
 
 <h2>Approach Taken</h2>
@@ -134,6 +136,10 @@ const handleInput = (e) => {
 <h3>Challenges</h3>
 
 <p>The most difficult component was the Favourite Beers function as it was something we hadn't really come across before, and something that was functional minutes before the deadline arrived. In general, wrestling with mapping out the API data was also a case of trial and error before finding the syntax that produced the result we desired.</p>
+
+<h3>Bugs</h3>
+
+<li>Styling is offset.</li>
 
 <h2>Future Features</h2>
 
