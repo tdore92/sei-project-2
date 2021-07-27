@@ -4,7 +4,7 @@
 
 <p>Our second GA project was done in pairs- using a public API, within 24 hours, we built a React application with the option to utilise a router and several pages. Craig and I decided on creating a Brewdog related webpage to show the brands products.</p>
 
-<a href="">Visit our Brewdog app here.</a>
+<a href="https://ga-react-punk-api.netlify.app/">Visit our Brewdog app here.</a>
 
 <h2>Brief</h2>
 
